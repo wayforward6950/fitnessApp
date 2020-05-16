@@ -1,0 +1,426 @@
+html, body {
+  height: 100%;
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+  
+}
+.custom-radios{
+  position: fixed;
+    right: 14%;
+    width: 26%;
+    top: 47%;
+}
+.custom-radios div {
+  display: inline-block;
+  margin:7%;
+}
+.custom-radios input[type="radio"] {
+  display: none;
+}
+.custom-radios input[type="radio"] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  /*border-radius: 50%;*/
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 25px;
+}
+.custom-radios input[type="radio"] + label span img {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-radios input[type="radio"].color-3 + label span {
+  background-color: green;
+}
+.custom-radios input[type="radio"].color-4 + label span {
+  background-color: #e74c3c;
+}
+.custom-radios input[type="radio"]:checked + label span img {
+  opacity: 1;
+}
+
+.container{
+  display: -ms-flex;
+	display: -webkit-flex;
+  display: flex;
+}
+ .leftBar{
+  flex : 1;
+  box-shadow: 0 4px 15px 0 rgba(7, 42, 68, 0.1);
+  background-color: var(--white);
+  width: 327px;
+  padding: 10px;
+  margin  : 44px 241px;
+  margin-right: 27px;
+}
+.leftBar .nav-header .heading{
+  width: 50%;
+}
+.leftBar .nav-header .cross{
+  display: none;
+  float: right;
+}
+@media only screen and (max-width: 768px){
+  .leftBar .nav-header .heading{
+    float: left;
+
+  }
+  .leftBar .nav-header .cross{
+    display: block;
+  }
+  .leftBar{
+    padding: 27px;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+.mobHeader,.results{
+  display: none;
+}
+@media only screen and (max-width: 768px){
+  /* .leftBar {
+    display: none;
+  } */
+  .mobHeader{
+    display: block;
+    margin-left: 10px;
+    width: 100%;
+  }
+  .mobHeader .logo{
+    float: left;
+  }
+  .mobHeader .menu{
+    float: right;
+    padding-right: 27px;
+  }
+  .clear{
+    clear: both;
+  }
+  .results{
+    display: block;
+    opacity: 0.7;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.78;
+  }
+}
+.leftBar .heading{
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+
+
+.heading-1 {
+  font-size: 18px;
+  line-height: 1.78;
+  letter-spacing: normal;
+  color: #c6305a;
+}
+
+.pull-left{
+  float : left;
+}
+
+.container .cardLayout{
+  height : 1170px;
+  overflow-y: auto;
+}
+
+.leftBar .search .searchBox{
+  width: 236.2px;
+  height: 35px;
+  background-color: #f1f1f1;
+}
+
+.leftBar .search .searchBox .searchImg{
+   margin-top: 2px;
+}
+
+.leftBar .search .searchBox .searchBar{
+}
+
+ .leftBar .search .searchBox .searchBar input{
+  border : none;
+  outline : 0;
+  padding: 6px;
+  font-size: 17px;
+  background-color: #f1f1f1;
+}
+ .leftBar .blocks .blocks-outer{
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+.leftBar .blocks .part{
+  width: 45px;
+  height: 33px;
+  border: solid 1px #c6305a;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+}
+.container-orange{
+  background-color: #ef5843;
+  color: #ffffff;
+}
+ .leftBar .blocks .part span{
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+}
+
+.container .content{
+  flex : 2;
+  padding: 10px;
+  width: 50%;
+  margin-top: 34px;
+}
+.container .content .card{
+  width: 605px;
+  height: 157px;
+  object-fit: contain;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-bottom: 26px;
+  display: flex;
+}
+@media only screen and (max-width: 768px){
+  .container .content .card{
+    width: 470px;
+  }
+}
+.container .content .card .part-1{
+}
+
+.container .content .card .part-1 .image{
+  margin: 20px;
+}
+@media only screen and (max-width: 768px){
+  .container .content .card .part-1 .image{
+    margin-left: 4px;
+  }
+}
+
+.container .content .card .part-2{
+  width : 250px;
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    margin: 28px;
+}
+
+.container .content .card .part-3{
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 39px;
+}
+@media only screen and (max-width: 768px){
+  .container .content .card .part-2{
+    margin-left:-8px;
+  }
+  .container .content .card .part-3{
+    margin-top: 31px;
+    margin-left: -28px;
+  }
+}
+.container .content .card .part-3 .button{
+  border: solid 1px #347d1f;
+  color: #347d1f;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 106px;
+  height: 26px;
+  text-align: center;
+  padding: 3px;
+  background-color: #347d1f;
+  color: white;
+}
+
+.container .content .card .part-3 > div{
+  margin-bottom: 15px;
+
+}
+.container .content .card .part-3 .heading{
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #292929;
+}
+.container .content .card .part-3 .heading-2{
+  font-family: Roboto;
+  font-size: 8px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #636363;
+}
+.container .content .card .part-2 .contentHeading{
+  line-height: 1.45;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #000000;
+}
+.container .content .card .part-2 .subHeading{
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #626262;
+}
+@media only screen and (max-width: 768px){
+  .container .content .card .part-2 .contentHeading{
+    font-size: 12px;
+  }
+  .container .content .card .part-2 .subHeading{
+    font-size: 10px;
+  }
+}
+.container .content .card .part-2 .sub-part-2-2 {
+  display: flex;
+  /* margin-left: -8px; */
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  /* margin: 0 auto; */
+  margin-left: -15px;
+
+}
+.container .content .card .part-2 .sub-part-2-2 > div {
+  border-right: 1px solid grey;
+  flex: 1;
+  text-align: center;
+  width: 95px;
+}
+@media only screen and (max-width: 768px){
+  .container .content .card .part-2 .sub-part-2-2{
+    margin-left: -5px;
+  }
+  .container .content .card .part-2 .sub-part-2-2 > div{
+    height: 25px;
+    width: 75px;
+  }
+}
+.container .content .card .part-2 .sub-part-2-2 > div:nth-child(3) {
+  border: none;
+}
+.container .content .card .part-2 .sub-part-2-2 .grey > div {
+  display: inline-block;
+}
+.container .content .card .part-2 .sub-part-2-2 .grey > div span{
+  color: #606060;
+  font-size: 8px;
+  font-weight: 300;
+}
+.container .content .card .part-2 .sub-part-3 span{
+  margin-right: 9px;
+  font-family: Roboto;
+  font-size: 10px;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.bold{
+  font-weight: 500;
+  color: #292929;
+}
+.container .content .card .part-3{
+  
+}
+.danger{
+  color : red;
+}
+.dividerLine{
+  margin-top:31px;
+  margin-bottom: 28px;
+  width: 100%;
+  height: 2px;
+  object-fit: contain;
+  background-image: radial-gradient(circle at 0 0, rgba(41, 41, 41, 0), #a2a2a2, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
+}
+.split-4{
+  display: flex;
+    flex-wrap: wrap;
+    padding-left: 16px;
+    list-style: none;
+}
+.split-4 li{
+  flex: 0 0 50%;
+  line-height: 37px;
+  font-size: 16px;
+}
+.split-4 li.selected{
+  background: linear-gradient(to left, #fff 35%, #ef5843 37%);
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+  .split-4 li.selected{
+    background: linear-gradient(to left, #fff 26%, #ef5843 28%);
+  }
+}
+
+.split-4 li.selected:before{
+  content: "• ";
+    color: #000
+    ; /* or whatever color you prefer */
+}
+.split-4 li.selected img{
+  margin-bottom: -2px;
+  margin-left: 8px;
+}
+
+
+.split-4 li:before{
+  content: "• ";
+    color: #ef5843
+    ; /* or whatever color you prefer */
+}
+

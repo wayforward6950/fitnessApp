@@ -1,0 +1,23 @@
+:global {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  & .area {
+    & md-toast {
+      position: fixed;
+    }
+  }
+  body.fontsLoaded {
+    font-family: pn;
+  }
+
+  i {
+    font-style: normal;
+  }
+}
