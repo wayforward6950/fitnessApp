@@ -2,15 +2,14 @@ import React, { Fragment } from 'react';
 import search from 'images/search.png';
 import cross from 'images/cross.png';
 import crossMenu from 'images/crossMenu.png';
-import { withRouter } from 'react-router-dom';
 
-const Navigation = ({isDesktop,history}) => {
+const Navigation = ({history,...props}) => {
     return <div className="leftBar">
     <div className="nav-header">
     <div className="heading">
     Find Classes
     </div>
-    <div className="cross" onClick={() => history.push("/fitness")}>
+    <div className="cross" onClick={() => props.handleClose(false)}>
         <img src={crossMenu} alt="cross" width="20px" height="20px"/>
     </div>
     </div>
@@ -71,5 +70,5 @@ const Divider = () => {
     return (<div className="dividerLine"/>)
   }
 
-  export default withRouter(Navigation);
+  export default Navigation;
   

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useState } from 'react';
 import PropTypes from 'prop-types';
 import Navigation from './Navigation';
 import logo from 'images/logo.png';
@@ -6,17 +6,23 @@ import menu from 'images/menu.png';
 import fitness from 'images/fitness.jpeg';
 
 const Fitness = ({response,history}) => {
+   const [show, showMenu] = useState(false);
 return (
    <Fragment>
    <div className="container">
 {
-   window.innerWidth && window.innerWidth > 769 &&  <Navigation isDesktop={true}/>
+   ((window.innerWidth && window.innerWidth > 769) || show) &&  <Navigation isDesktop={true}
+     handleClose = {(param) => {
+        showMenu(param);
+   }}
+   />
 
 }
-       <div className="content">
+{
+   !show &&<div className="content">
    <div className="mobHeader">
       <div className="logo"><img src={logo} alt="logo" width="30px" height="28px" ></img></div>
-      <div className="menu"><img src={menu} alt="logo" width="30px" height="28px" onClick={() => history.push('/navigation')}></img></div>
+      <div className="menu"><img src={menu} alt="logo" width="30px" height="28px" onClick={() => showMenu(true)}></img></div>
       <div className="clear"></div>
       </div>
    <div className="cardLayout">
@@ -24,6 +30,8 @@ return (
    <Card response = {response}/>
    </div>
  </div>
+}
+       
  </div>
  </Fragment>
   );
