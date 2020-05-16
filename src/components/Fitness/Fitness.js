@@ -5,16 +5,17 @@ import logo from 'images/logo.png';
 import menu from 'images/menu.png';
 import fitness from 'images/fitness.jpeg';
 
-const Fitness = ({response,history}) => {
+const Fitness = ({response,handleFilterClick}) => {
    const [show, showMenu] = useState(false);
 return (
    <Fragment>
    <div className="container">
 {
-   ((window.innerWidth && window.innerWidth > 769) || show) &&  <Navigation isDesktop={true}
+   ((window.innerWidth && window.innerWidth > 769) || show) &&  <Navigation
      handleClose = {(param) => {
         showMenu(param);
    }}
+   handleFilterClick = {handleFilterClick}
    />
 
 }
@@ -41,7 +42,7 @@ return (
 
 
 const Card = ({response}) => {
-   return response && response.map((each,key) => {
+   return response && response.length > 0 && response.map((each,key) => {
       return <div className="card">
       <div className="part-1"><div className="image"><img src={fitness} alt="cross" width="122px" height="126px"/></div></div>
       <div className="part-2">
@@ -82,7 +83,7 @@ const Card = ({response}) => {
       </div>
    
    </div>
-   })
+   }) || null;
 }
 
 

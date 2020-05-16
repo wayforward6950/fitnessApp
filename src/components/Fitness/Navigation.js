@@ -3,7 +3,7 @@ import search from 'images/search.png';
 import cross from 'images/cross.png';
 import crossMenu from 'images/crossMenu.png';
 
-const Navigation = ({history,...props}) => {
+const Navigation = ({...props}) => {
     return <div className="leftBar">
     <div className="nav-header">
     <div className="heading">
@@ -18,13 +18,13 @@ const Navigation = ({history,...props}) => {
       <span className="heading-1">Search</span>
       <div className="searchBox">
          <div className="searchImg pull-left"><img src={search} alt="search" width="33px" height="29px"/></div>
-         <div className="searchBar pull-left"><input type="text"/></div>
+         <div className="searchBar pull-left"><input type="text" onKeyUp = {(e) => props.handleFilterClick(e,'searchText')}/></div>
       </div>
     </div>
     <Divider/>
     <div className="search-1">
     <span className="heading-1">Class Types:</span>
-       <ul className="split-4">
+       <ul className="split-4" onClick = {(e) => props.handleFilterClick(e,'classType') }>
           <li className="selected">All <img src={cross} alt="cross" width="16px" height="16px"/></li>
           <li>Dance</li>
           <li>Strength</li>
@@ -38,7 +38,7 @@ const Navigation = ({history,...props}) => {
     <Divider/>
     <div className="search-1">
     <span className="heading-1">Experience Levels:</span>
-       <ul className="split-4">
+       <ul className="split-4" onClick = {(e) => props.handleFilterClick(e,'level')}>
           <li>All</li>
           <li className="selected">Advanced <img src={cross} alt="cross" width="16px" height="16px"/></li>
           <li>Beginner</li>
@@ -48,7 +48,7 @@ const Navigation = ({history,...props}) => {
     <Divider/>
     <div className="blocks">
     <span className="heading-1">Times:</span>
-    <div className="blocks-outer">
+    <div className="blocks-outer" onClick = {(e) => props.handleFilterClick(e,'time')}>
        <div className="part container-orange"><span>All</span></div>
        <div className="part"><span>AM</span></div>
        <div className="part"><span>PM</span></div>
@@ -57,7 +57,7 @@ const Navigation = ({history,...props}) => {
     <Divider/>
     <div className="blocks">
     <span className="heading-1">Day:</span>
-    <div className="blocks-outer">
+    <div className="blocks-outer" onClick = {(e) => props.handleFilterClick(e,'date')}>
        <div className="part container-orange"><span>All</span></div>
        <div className="part"><span>Date</span></div>
      </div>
