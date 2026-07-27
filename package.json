@@ -33,7 +33,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "node-sass": "^4.13.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "3.5.1"
+    "webpack-dev-server": "5.2.6"
   },
   "scripts": {
     "webpack": "webpack",
